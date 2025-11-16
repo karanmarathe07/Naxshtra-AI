@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import logo from "@/assets/logo.png";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const Home = () => {
   const handleScheduleMeeting = () => {
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Content - 3D Logo */}
+          {/* Right Content - Logo */}
           <div
             ref={heroRight.ref}
             className={cn(
@@ -91,11 +91,13 @@ const Home = () => {
           >
             <div className="relative">
               <div className="absolute inset-0 gradient-glow rounded-full blur-3xl opacity-50" />
-              <img
-                src={logo}
-                alt="Naxshatra AI Logo"
-                className="relative w-80 h-80 md:w-96 md:h-96 object-contain animate-float hover:animate-spin-slow transition-all duration-700 cursor-pointer"
-              />
+              <div className="relative w-80 h-80 md:w-96 md:h-96 animate-float transition-all duration-700 cursor-pointer">
+                <img
+                  src={logo}
+                  alt="Naxshatra AI Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
